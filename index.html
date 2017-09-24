@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<!-- Inserção CSS / BOOTSTRAP / JAVASCRIPT -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<script src="js/scriptVote.js"></script>
+    	<script type="text/javascript">
+    		$(function () {
+ 				 $('[data-toggle="tooltip"]').tooltip()
+			})
+    	</script>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		</script>
+    	<!-- FIM Inserção CSS / BOOTSTRAP / JAVASCRIPT -->
+
+    	<title>Quiz | Vote bem</title>
+
+    	<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<body>
+		<div class="container" id="quiz">
+
+			<a href="#inicio" data-toggle="tab" id="linkInicio"></a>
+
+			<div class="tab-content" id="inicio">
+				<div class="tab-pane active">
+					<a href="#perguntas" data-toggle="tab">
+						<button type="button" class="btn btn-primary botao_iniciar" name="botao_inicial" id="iniciar">
+							Começar <span class="glyphicon glyphicon-share-alt"></span>
+						</button>
+					</a>
+				</div>
+
+				<div class="tab-pane" id="perguntas">
+					<header class="area_pergunta">
+						<h4 id="tituloPergunta"></h4>
+					</header>
+
+					<nav class="opcoes">
+						<div class="area_opcoes">
+							<label for="concordo_m">
+								<input type="radio" name="opcao" id="concordo_m" value=4> <span class="font_opcoes">Concordo muito</span>
+							</label> 
+						</div>
+						<div class="area_opcoes">
+							<label for="concordo">
+								<input type="radio" name="opcao" id="concordo" value=2> <span class="font_opcoes">Concordo</span>
+							</label>
+						</div>
+						<div class="area_opcoes">
+							<label for="neutro">
+								<input type="radio" name="opcao" id="neutro" class="active" value=0> <span class="font_opcoes">Neutro</span>
+							</label>
+						</div>
+						<div class="area_opcoes">
+							<label for="discordo">
+								<input type="radio" name="opcao" id="discordo" value=-2> <span class="font_opcoes">Discordo</span>
+							</label>
+						</div>
+						<div class="area_opcoes">
+							<label for="discordo_m">
+								<input type="radio" name="opcao" id="discordo_m" value=-4> <span class="font_opcoes">Discordo muito</span>
+							</label>
+						</div>
+					</nav>
+
+					<footer class="v_and_p">
+								<button type="button" class="btn btn-success botao_prosseguir" name="avancar" id="avancar">
+									Avançar<span class="glyphicon glyphicon-chevron-right"></span>
+								</button>
+					</footer>
+				</div>
+
+
+				<a href="#modal_video" data-toggle="tab" id="linkModalVideo" />
+
+				<div class="tab-pane" id="modal_video">
+					<div class="modal_gif">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/8ULQpuVps3Y" 						frameborder="0" allowfullscreen class="area_video"></iframe>
+						<a href="#final" data-toggle="tab">
+							<button type="button" class="btn btn-danger botao_prosseguir_video" name="continuar">
+								Resultado final <span class="glyphicon glyphicon-eye-open"></span>
+							</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="tab-pane" id="final">
+					<div class="personagem">
+						<img height="150px" id="avatar_politico">
+						<strong id="titulo_personagem"></strong>
+					</div>
+					<!-- FIM Imagem do Avatar -->
+
+					<!-- Texto do Avatar -->
+					<div class="texto_informativo">
+						<h3 id="titulo_ideologia"></h3>
+						<h5 id="texto_ideologia"></h5>
+					</div>
+					<!-- FIM Texto do Avatar -->
+
+					<!-- Compartilhar Facebook -->
+					<div class="compartilhar">
+						<div class="fb-share-button" data-href="file:///C:/Users/Leo/Documents/Projetos/Vote%20bem/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
+							<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
+								<img src="img/fb.png" class="botao_compartilharf" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Facebook">
+							</a>
+						</div>
+
+						<div>
+							<a href="https://twitter.com/intent/tweet?button_hashtag=Votebem">
+								<img src="img/tt.png" class="botao_compartilhart" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Twitter">
+							</a>
+						</div>
+					</div>
+
+					<div class="grafico">
+						<canvas class="img_grafico" id="canvas" width="266" height="285"></canvas>
+							<button type="button" id="refazer" class="btn btn-primary botao_finalizar">Refazer</button>
+						<button type="button" class="botao_rever" data-toggle="modal" data-target="#janela"
+						data-placement="top" title="Rever video" name="rever">
+							<span class="glyphicon glyphicon-play text_rever" data-toggle="tooltip" dara-placement="top" 
+							title="Rever video"></span>
+						</button>
+
+					<div class="modal fade" id="janela">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal_rever">
+									<button type="button" class="close" data-dismiss="modal" name="fechar">
+                						<span class="botao_fechar">&times;</span>
+              						</button>
+									<iframe name="video" width="560" height="315" src="https://www.youtube.com/embed/8ULQpuVps3Y" frameborder="0" allowfullscreen class="area_video_rever"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

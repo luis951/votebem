@@ -1,0 +1,225 @@
+/*ID ID ID ID ID */
+
+#quiz {
+	width: 600px;
+	height: 400px;
+	background: url(../img/inicio.png);
+}
+
+#perguntas {
+	width: 600px;
+	height: 390px;
+	background: url(../img/background.png);
+}
+
+#final {
+	width: 600px;
+	height: 390px;
+	background: url(../img/background.png);
+}
+
+#modal_video {
+	width: 615px;
+	height: 400px;
+	background: url(../img/background.png);
+}
+
+/*ID ID ID ID ID */
+
+
+
+/* CLASSES CLASSES CLASSES CLASSES*/ 
+
+.botao_iniciar{
+	width: 104px;
+	height: 40px;
+	float: right;
+	margin-top: 352px;
+}
+
+.area_pergunta {
+	width: 560px;
+	height: 60px;
+	background: rgba(213,212,210,0.5);
+	margin-left: 10px;
+}
+
+.area_pergunta h4 {
+	text-align: center;
+	color: #000;
+	padding-top: 20px;
+}
+
+.opcoes {
+	width: 560px;
+	height: 250px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.font_opcoes {
+	font-size: 20px;
+	color: #000;
+}
+
+.area_opcoes {
+	width: 560px;
+	height: 22px;
+	margin-left: 10px;
+	margin-bottom: 25px;
+}
+
+.v_and_p {
+	width: 560px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.modal_gif {
+	width: 600px;
+	height: 400px;
+	background: #575757;
+}
+
+.area_video {
+	float: left;
+	margin-left: 20px;
+}
+
+.botao_prosseguir_video {
+	width: 150px;
+	height: 38px;
+	background: #c9302c;
+	border: 1px solid #c9302c;
+	float: left;
+	margin-left: 225px;
+	margin-top: 25px;
+}
+
+.botao_prosseguir_video:hover {
+	background: #b02c28;
+}
+
+.botao_prosseguir {
+	float: right;
+}
+
+.personagem {
+	float: top;
+	width: 219px;
+	height: 180px;
+	margin-top: 10px;
+	margin-right: : 10px;
+}
+
+.hh {
+	text-align: center;
+}
+.personagem strong {
+	color: #000;
+}
+
+.texto_informativo {
+	float: top;
+	width: 219px;
+	height: 110px;
+	margin-top: 12px; 
+	margin-right: 10px;
+	background: rgba(213,212,210,0.3);
+}
+
+.texto_informativo h5 {
+	margin-top: 0;
+	text-align: justify;
+	color: #000;
+}
+
+.texto_informativo h3 {
+	margin-top: 0;
+	text-align: center;
+	color: #000;
+}
+
+.compartilhar {
+	float: top;
+	width: 219px;
+	height: 80px;
+	margin-right: 10px;
+}
+
+.botao_compartilharf {
+	float: left;
+	margin-top: 25px;
+	margin-left: 70px;
+}
+
+.botao_compartilhart {
+	float: left;
+	margin-top: 25px;
+	margin-left: 5px;
+}
+
+.botao_rever {
+	float: right;
+	width: 100px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	background: #d5d4d3;
+	margin-top: 50px;
+	margin-right: 10px;
+}
+
+.botao_rever:hover {
+	background: #b2b2b2;
+}
+
+.botao_rever:focus {
+	outline: 0;
+}
+
+.text_rever {
+	color: #000;
+	font-size: 16px;
+}
+
+.grafico {
+	float: right;
+	width: 340px;
+	height: 380px;
+	margin-top: -380px;
+	margin-right: 10px;
+}
+
+.img_grafico {
+	float: left;
+	margin-left: 50px;
+}
+
+.botao_finalizar {
+	width: 100px;
+	float:right;
+	margin-top: 50px;
+}
+
+.area_video_rever {
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.modal_rever {
+	width: 600px;
+	height: 360px;
+	background: #575757;
+}
+
+.botao_fechar {
+	color: red;
+	margin-right: 3px;
+}
+
+
+
+/* FIM CLASSES CLASSES CLASSES CLASSES*/
