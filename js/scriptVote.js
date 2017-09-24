@@ -86,8 +86,6 @@ var text ='{"perguntas":{"perguntasEco" : ['+
 			var nomePersonagem;
 			var textoIdeologia;
 			var imgPersonagem;
-			x = 0;
-			y= 20;
 			if(x<-10){
 				if(y<=-4){
 					//V (Anarquismo)
