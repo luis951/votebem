@@ -31,10 +31,8 @@
 	<body>
 		<div class="container" id="quiz">
 
-			<a href="#inicio" data-toggle="tab" id="linkInicio"></a>
-
-			<div class="tab-content" id="inicio">
-				<div class="tab-pane active">
+			<div class="tab-content">
+				<div class="tab-pane active" id="inicio">
 					<a href="#perguntas" data-toggle="tab">
 						<button type="button" class="btn btn-primary botao_iniciar" name="botao_inicial" id="iniciar">
 							Começar <span class="glyphicon glyphicon-share-alt"></span>
@@ -60,7 +58,7 @@
 						</div>
 						<div class="area_opcoes">
 							<label for="neutro">
-								<input type="radio" name="opcao" id="neutro" class="active" value=0> <span class="font_opcoes">Neutro</span>
+								<input type="radio" name="opcao" id="neutro" checked="checked" value=0> <span class="font_opcoes">Neutro</span>
 							</label>
 						</div>
 						<div class="area_opcoes">
@@ -79,6 +77,10 @@
 								<button type="button" class="btn btn-success botao_prosseguir" name="avancar" id="avancar">
 									Avançar<span class="glyphicon glyphicon-chevron-right"></span>
 								</button>
+
+								<button type="button" class="btn btn-danger" id="voltar">
+									<span class="glyphicon glyphicon-chevron-left"></span>Voltar
+								</button>
 					</footer>
 				</div>
 
@@ -87,7 +89,8 @@
 
 				<div class="tab-pane" id="modal_video">
 					<div class="modal_gif">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/8ULQpuVps3Y" 						frameborder="0" allowfullscreen class="area_video"></iframe>
+						<iframe width="560" height="315" id="videoLink" 
+							frameborder="0" allowfullscreen class="area_video" ></iframe>
 						<a href="#final" data-toggle="tab">
 							<button type="button" class="btn btn-danger botao_prosseguir_video" name="continuar">
 								Resultado final <span class="glyphicon glyphicon-eye-open"></span>
@@ -127,7 +130,9 @@
 
 					<div class="grafico">
 						<canvas class="img_grafico" id="canvas" width="266" height="285"></canvas>
+						<a href="#inicio" data-toggle="tab" id="linkInicio">
 							<button type="button" id="refazer" class="btn btn-primary botao_finalizar">Refazer</button>
+						</a>
 						<button type="button" class="botao_rever" data-toggle="modal" data-target="#janela"
 						data-placement="top" title="Rever video" name="rever">
 							<span class="glyphicon glyphicon-play text_rever" data-toggle="tooltip" dara-placement="top" 
@@ -141,7 +146,8 @@
 									<button type="button" class="close" data-dismiss="modal" name="fechar">
                 						<span class="botao_fechar">&times;</span>
               						</button>
-									<iframe name="video" width="560" height="315" src="https://www.youtube.com/embed/8ULQpuVps3Y" frameborder="0" allowfullscreen class="area_video_rever"></iframe>
+									<iframe width="560" height="315" id="videoLink" 
+										frameborder="0" allowfullscreen class="area_video" ></iframe>
 								</div>
 							</div>
 						</div>
