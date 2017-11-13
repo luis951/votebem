@@ -9,15 +9,14 @@
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    	<script src="js/scriptVote.js"></script>
+		<script src="js/json.js"></script>
+		<script src="js/scriptVote.js"></script>
+    	<script src="js/view.js"></script>
     	<script type="text/javascript">
     		$(function () {
  				 $('[data-toggle="tooltip"]').tooltip()
 			})
     	</script>
-
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-		</script>
     	<!-- FIM Inserção CSS / BOOTSTRAP / JAVASCRIPT -->
 
     	<title>Quiz | Vote bem</title>
@@ -29,131 +28,153 @@
 	</head>
 
 	<body>
-		<div class="container" id="quiz">
+		
+		<section class="tab-content"> <!-- Inicio -->
+			<div class="tab-pane active container">
+				<div class="row">
+							
+					<div class="col-md-7" id="inicio">
+						<img src="img/inicial.png" class="img-responsive">
+						<a href="#urna" id="iniciar" data-toggle="tab" class="btn btn-primary btn_custom">Começar</a>
+					</div> <!-- col-md-7 -->
 
-			<div class="tab-content">
-				<div class="tab-pane active" id="inicio">
-					<a href="#perguntas" data-toggle="tab">
-						<button type="button" class="btn btn-primary botao_iniciar" name="botao_inicial" id="iniciar">
-							Começar <span class="glyphicon glyphicon-share-alt"></span>
-						</button>
-					</a>
-				</div>
+				</div> <!-- Fim row -->
+			</div> <!-- Fim container -->
 
-				<div class="tab-pane" id="perguntas">
-					<header class="area_pergunta">
-						<h4 id="tituloPergunta"></h4>
-					</header>
+			<div class="tab-pane container" id="urna">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="row">
+							
+							<div class="col-md-6 urna_right">
+								<div class="tela">
+									<h4 id="tituloPergunta"></h4>
+									<p id="totalPerguntas"></p>
+								</div>
+							</div> <!-- Fim col-md-6 -->
 
-					<nav class="opcoes">
-						<div class="area_opcoes">
-							<label for="concordo_m">
-								<input type="radio" name="opcao" id="concordo_m" value=4> <span class="font_opcoes">Concordo muito</span>
-							</label> 
-						</div>
-						<div class="area_opcoes">
-							<label for="concordo">
-								<input type="radio" name="opcao" id="concordo" value=2> <span class="font_opcoes">Concordo</span>
-							</label>
-						</div>
-						<div class="area_opcoes">
-							<label for="neutro">
-								<input type="radio" name="opcao" id="neutro" checked="checked" value=0> <span class="font_opcoes">Neutro</span>
-							</label>
-						</div>
-						<div class="area_opcoes">
-							<label for="discordo">
-								<input type="radio" name="opcao" id="discordo" value=-2> <span class="font_opcoes">Discordo</span>
-							</label>
-						</div>
-						<div class="area_opcoes">
-							<label for="discordo_m">
-								<input type="radio" name="opcao" id="discordo_m" value=-4> <span class="font_opcoes">Discordo muito</span>
-							</label>
-						</div>
-					</nav>
+							<div class="col-md-6 urna_left">
+								<div class="escolhas">
+									<ul class="nav">
+										<img src="img/logo.svg" class="logo_votobem">
+										<li><button type="button" name="opcao" class="btn btn_escolhas" id="concordo_m">concordo muito</button></li>
+										<li><button type="button" name="opcao" class="btn btn_escolhas" id="concordo">concordo</button></li>
+										<li><button type="button" name="opcao" class="btn btn_escolhas" id="discordo_m">discordo muito</button></li>
+										<li><button type="button" name="opcao" class="btn btn_escolhas" id="discordo">discordo</button></li>
+										<li><button type="submit" class="btn btn_confirmar" id="avancar">confirmar</button></li>
+										<li><button class="btn btn_voltar" id="voltar">voltar</button></li>
+										<a data-toggle="modal" data-target="#grafico" id="linkResultado"></a>
+									</ul>
+								</div> <!-- Fim escolhas -->
+							</div> <!-- Fim col-md-6 -->
 
-					<footer class="v_and_p">
-								<button type="button" class="btn btn-success botao_prosseguir" name="avancar" id="avancar">
-									Avançar<span class="glyphicon glyphicon-chevron-right"></span>
-								</button>
+						</div> <!-- Fim row -->
+					</div> <!-- Fim col-md-8 -->
+				</div> <!-- Fim row -->
+			</div> <!-- Fim container -->
 
-								<button type="button" class="btn btn-danger" id="voltar">
-									<span class="glyphicon glyphicon-chevron-left"></span>Voltar
-								</button>
-					</footer>
-				</div>
+			<div class="modal fade container" id="grafico">
+				<div class="modal-dialog">
+					<div class="modal-content row">
+					 	<div class="col-md-9 modal_grafico">
+					 		<div class="row">
 
+						 		<div class="col-md-2">
+						 			<ul>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Comunismo" onclick="setarModal(16)">Comunismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Socialismo" onclick="setarModal(17)">Socialismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Socialismo libertário" onclick="setarModal(18)">Socialismo Lib.</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarcocoletivismo" onclick="setarModal(19)">Coletivismo</a></li>
+						 			</ul>
+						 		</div> <!-- Fim col-md-2 -->
 
-				<a href="#modal_video" data-toggle="tab" id="linkModalVideo" />
+						 		<div class="col-md-2">
+						 			<ul>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Nacionalismo" onclick="setarModal(12)">Nacionalismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Trabalhismo" onclick="setarModal(13)">Trabalhismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Sindicalismo" onclick="setarModal(14)">Sindicalismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Social democracia" onclick="setarModal(15)">Social Dem.</a></li>
+						 			</ul>
+						 		</div> <!-- Fim col-md-2 -->
 
-				<div class="tab-pane" id="modal_video">
-					<div class="modal_gif">
-						<iframe width="560" height="315" id="videoLink" 
-							frameborder="0" allowfullscreen class="area_video" ></iframe>
-						<a href="#final" data-toggle="tab">
-							<button type="button" class="btn btn-danger botao_prosseguir_video" name="continuar">
-								Resultado final <span class="glyphicon glyphicon-eye-open"></span>
-							</button>
-						</a>
-					</div>
-				</div>
+						 		<div class="col-md-2">
+						 			<ul>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Autoritarismo" onclick="setarModal(8)">Autoritarismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin1" id="Centro" onclick="setarModal(9)">Centro</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin2" id="Ativismo" onclick="setarModal(10)">Ativismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarquismo" onclick="setarModal(11)">Anarquismo</a></li>
+						 			</ul>
+						 		</div> <!-- Fim col-md-2 -->
 
-				<div class="tab-pane" id="final">
-					<div class="personagem">
-						<img height="150px" id="avatar_politico">
-						<strong id="titulo_personagem"></strong>
-					</div>
-					<!-- FIM Imagem do Avatar -->
+						 		<div class="col-md-2">
+						 			<ul>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Paleoconservadorismo" onclick="setarModal(4)">PaleoCon</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab"class="btn btn_grafico" id="Conservadorismo" onclick="setarModal(5)">Conservador</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Liberalismo" onclick="setarModal(6)">Liberalismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Mutualismo" onclick="setarModal(7)">Mutualismo</a></li>
+						 			</ul>
+						 		</div> <!-- Fim col-md-2 -->
 
-					<!-- Texto do Avatar -->
-					<div class="texto_informativo">
-						<h3 id="titulo_ideologia"></h3>
-						<h5 id="texto_ideologia"></h5>
-					</div>
-					<!-- FIM Texto do Avatar -->
+						 		<div class="col-md-2">
+						 			<ul>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_fun " id="Fundamentalismo" onclick="setarModal(0)">Fundamentalismo</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Neoconservadorismo" onclick="setarModal(1)">NeoCon</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Capitalismo libertário" onclick="setarModal(2)">Capitalismo Lib.</a></li>
+						 				<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarcocapitalismo" onclick="setarModal(3)">Anarco Cap.</a></li>
+						 			</ul>
+						 		</div> <!-- Fim col-md-2 -->
 
-					<!-- Compartilhar Facebook -->
-					<div class="compartilhar">
-						<div class="fb-share-button" data-href="file:///C:/Users/Leo/Documents/Projetos/Vote%20bem/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
-							<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
-								<img src="img/fb.png" class="botao_compartilharf" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Facebook">
-							</a>
-						</div>
+						 	</div> <!-- row -->
+					 	</div> <!-- Fim col-md-9 -->	
+					</div> <!-- Fim row -->
+				</div> <!-- Fim modal-dialog -->
+			</div> <!-- Fim container -->
 
-						<div>
-							<a href="https://twitter.com/intent/tweet?button_hashtag=Votebem">
-								<img src="img/tt.png" class="botao_compartilhart" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Twitter">
-							</a>
-						</div>
-					</div>
-
-					<div class="grafico">
-						<canvas class="img_grafico" id="canvas" width="266" height="285"></canvas>
-						<a href="#inicio" data-toggle="tab" id="linkInicio">
-							<button type="button" id="refazer" class="btn btn-primary botao_finalizar">Refazer</button>
-						</a>
-						<button type="button" class="botao_rever" data-toggle="modal" data-target="#janela"
-						data-placement="top" title="Rever video" name="rever">
-							<span class="glyphicon glyphicon-play text_rever" data-toggle="tooltip" dara-placement="top" 
-							title="Rever video"></span>
-						</button>
-
-					<div class="modal fade" id="janela">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal_rever">
-									<button type="button" class="close" data-dismiss="modal" name="fechar">
-                						<span class="botao_fechar">&times;</span>
-              						</button>
-									<iframe width="560" height="315" id="videoLink" 
-										frameborder="0" allowfullscreen class="area_video" ></iframe>
+			<div class="tab-pane container" id="resultado">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="row">
+							
+							<div class="col-md-6 urna_right">
+								<div class="tela">
+									<iframe name="video" width="358" height="308" src="https://www.youtube.com/embed/epQEUGlbUnM" frameborder="0" allowfullscreen class="video"></iframe>
 								</div>
 							</div>
+
+							<div class="col-md-6 urna_left">
+								<div class="escolhas">
+									<h3 class="tit_result" id="tituloResultado"></h3>
+									<p class="text_result" id="textoResultado">
+									</p>
+
+									<section class="compartilhar" id="compartilharDiv">
+
+										<div class="fb-share-button" data-href="file:///D:/Vote%20bem%202.0/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
+											<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
+												<button type="button" class="btn btn-primary botao_face" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Facebook">
+													Facebook
+												</button>
+											</a> <!-- Fim Facebook -->
+
+										<div class="comp_tt">
+											<a href="https://twitter.com/intent/tweet?button_hashtag=Votebem">
+												<button type="button" class="btn btn-primary botao_tt" data-toggle="tooltip" dara-placement="top" title="Compartilhar no Twitter">
+													Twitter
+												</button>
+											</a>
+										</div> <!-- Fim twitter -->
+
+									</section> <!-- Fim compartilhar -->
+
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+
+		</section> <!-- Fim section inicio -->
+
 	</body>
 </html>

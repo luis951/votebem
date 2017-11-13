@@ -1,225 +1,244 @@
-/*ID ID ID ID ID */
 
-#quiz {
-	width: 600px;
-	height: 400px;
-	background: url(../img/inicio.png);
+
+
+
+
+
+/* Classes Classes Classes Classes Classes */
+
+html, body {
+	height: 100%;
+	background: #b0b0b0;
 }
 
-#perguntas {
-	width: 600px;
-	height: 390px;
-	background: url(../img/background.png);
-}
-
-#final {
-	width: 600px;
-	height: 390px;
-	background: url(../img/background.png);
-}
-
-#modal_video {
-	width: 615px;
-	height: 400px;
-	background: url(../img/background.png);
-}
-
-/*ID ID ID ID ID */
-
-
-
-/* CLASSES CLASSES CLASSES CLASSES*/ 
-
-.botao_iniciar{
-	width: 104px;
-	height: 40px;
+.btn_custom {
 	float: right;
-	margin-top: 352px;
+	margin: -40px 60px 0 0;
+	position: relative;
 }
 
-.area_pergunta {
-	width: 560px;
-	height: 60px;
-	background: rgba(213,212,210,0.5);
-	margin-left: 10px;
-}
-
-.area_pergunta h4 {
-	text-align: center;
-	color: #000;
-	padding-top: 20px;
-}
-
-.opcoes {
-	width: 560px;
-	height: 250px;
-	margin-left: 10px;
-	margin-top: 20px;
-}
-
-.font_opcoes {
-	font-size: 20px;
-	color: #000;
-}
-
-.area_opcoes {
-	width: 560px;
-	height: 22px;
-	margin-left: 10px;
-	margin-bottom: 25px;
-}
-
-.v_and_p {
-	width: 560px;
-	height: 40px;
-	margin-top: 10px;
-	margin-left: 10px;
-}
-
-.modal_gif {
-	width: 600px;
+.urna_right {
+	background: url(../img/urna1.png) no-repeat;
 	height: 400px;
-	background: #575757;
 }
 
-.area_video {
-	float: left;
-	margin-left: 20px;
-}
-
-.botao_prosseguir_video {
-	width: 150px;
-	height: 38px;
-	background: #c9302c;
-	border: 1px solid #c9302c;
-	float: left;
-	margin-left: 225px;
-	margin-top: 25px;
-}
-
-.botao_prosseguir_video:hover {
-	background: #b02c28;
-}
-
-.botao_prosseguir {
-	float: right;
-}
-
-.personagem {
-	float: top;
-	width: 219px;
-	height: 180px;
-	margin-top: 10px;
-	margin-right: : 10px;
-}
-
-.hh {
-	text-align: center;
-}
-.personagem strong {
-	color: #000;
-}
-
-.texto_informativo {
-	float: top;
-	width: 219px;
-	height: 110px;
-	margin-top: 12px; 
-	margin-right: 10px;
-	background: rgba(213,212,210,0.3);
-}
-
-.texto_informativo h5 {
-	margin-top: 0;
-	text-align: justify;
-	color: #000;
-}
-
-.texto_informativo h3 {
-	margin-top: 0;
-	text-align: center;
-	color: #000;
-}
-
-.compartilhar {
-	float: top;
-	width: 219px;
-	height: 80px;
-	margin-right: 10px;
-}
-
-.botao_compartilharf {
-	float: left;
-	margin-top: 25px;
-	margin-left: 70px;
-}
-
-.botao_compartilhart {
-	float: left;
-	margin-top: 25px;
-	margin-left: 5px;
-}
-
-.botao_rever {
-	float: right;
-	width: 100px;
-	height: 35px;
-	border: none;
+.tela {
+	background: url(../img/lcd.png) no-repeat;
+	width: 360px;
+	height: 310px;
 	border-radius: 5px;
-	background: #d5d4d3;
-	margin-top: 50px;
-	margin-right: 10px;
+	margin: 70px 0 0 0;
 }
 
-.botao_rever:hover {
-	background: #b2b2b2;
+.urna_left {
+	background: url(../img/urna2.png) no-repeat;
+	height: 400px;
 }
 
-.botao_rever:focus {
+.logo_votobem {
+	padding: 8px 85px 0 85px;
+}
+
+.escolhas {
+	background: linear-gradient(30deg,#808080,#adadad);
+	width: 320px;
+	height: 310px;
+	border-radius: 5px;
+	margin: 70px 0 0 15px;
+}
+
+.btn_escolhas {
+	color: #fff;
+	background: #696868;
+	width: 250px;
+	border: 1px solid #595656;
+	margin: 15px 35px 0 35px;
+	text-transform: uppercase;
+}
+
+.btn_escolhas:hover {
+	color: #fff;
+	background: #595656;
 	outline: 0;
 }
 
-.text_rever {
+.btn_escolhas:focus {
+	color: #fff;
+	background: linear-gradient(#4d4949,#595656);
+	outline: 0;
+}
+
+.btn_confirmar {
+	width: 110px;
+	background: #309a41;
 	color: #000;
-	font-size: 16px;
-}
-
-.grafico {
+	margin: 25px 35px 0 0;
+	border-bottom: 3px solid #21652c;
+	border-right: 3px solid #21652c;
 	float: right;
-	width: 340px;
-	height: 380px;
-	margin-top: -380px;
-	margin-right: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
-.img_grafico {
-	float: left;
-	margin-left: 50px;
+.btn_confirmar:hover {
+	color: #000;
+	background: #2a7f38;
 }
 
-.botao_finalizar {
-	width: 100px;
-	float:right;
-	margin-top: 50px;
+.btn_confirmar:active {
+	color: #000;
+	background: #2a7f38;
+	border: none;
+	border-top: 3px solid #21652c;
+	border-left: 3px solid #21652c;
+	outline: 0;
 }
 
-.area_video_rever {
-	float: left;
-	margin-left: 20px;
-	margin-top: 20px;
+.btn_confirmar:focus {
+	outline: 0;
+	color: #000;
 }
 
-.modal_rever {
-	width: 600px;
-	height: 360px;
-	background: #575757;
+.btn_voltar {
+	width: 90px;
+	background: #e83a1c;
+	color: #000;
+	border-bottom: 3px solid #af250d;
+	border-right: 3px solid #af250d;
+	margin: 25px 50px 0 0;
+	float: right;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
-.botao_fechar {
-	color: red;
-	margin-right: 3px;
+.btn_voltar:hover {
+	color: #000;
+	background: #bf360c;
 }
 
+.btn_voltar:active {
+	color: #000;
+	background: #bf360c;
+	border: none;
+	border-top: 3px solid #af250d;
+	border-left: 3px solid #af250d;
+	outline: 0;
+}
 
+.btn_voltar:focus {
+	color: #000;
+	outline: 0;
+}
 
-/* FIM CLASSES CLASSES CLASSES CLASSES*/
+.modal_grafico {
+	width: 900px;
+	height: 550px;
+	background: url(../img/grafico.png),
+				#000;
+	margin-left: -150px;
+}
+
+.btn_grafico {
+	width: 120px;
+	border-radius: 100px;
+	border: 2px solid #000;
+	background: transparent;
+	color: #000;
+	margin: 70px 0 0 30px;
+	text-decoration: none;
+}
+
+.btn_grafico:hover {
+	color: #000;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.btn_grafico:visited {
+	color: #000;
+}
+
+.video {
+	padding: 5px;
+}
+
+.tit_result {
+	color: #000;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px 0 0 0;
+}
+
+.text_result {
+	color: #000;
+	text-align: justify;
+	padding: 0 30px;
+}
+
+.compartilhar {
+	width: 200px;
+	height: 90px;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.botao_tt {
+	background: #4ab3f4;
+	width: 260px;
+	height: 35px;
+	margin-top: 5px;
+	font-weight: 900;
+}
+
+.botao_face {
+	background: #4267b2;
+	width: 260px;
+	height: 35px;
+	font-weight: 900;
+}
+
+/* TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA */
+
+#urna h4 {
+	color: #000;
+	text-align: center;
+	padding: 120px 60px 0 60px;
+}
+
+#urna p {
+	color: #000;
+	float: right;
+	padding: 100px 10px 0 0;
+}
+
+a:visited {
+	color: #000;
+}
+
+.btn_margin {
+	margin: 120px 0 0 30px;
+}
+
+.btn_margin1 {
+	margin: 150px 0 0 30px;
+}
+
+.btn_margin2 {
+	margin: 40px 0 0 30px;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.btn_sel {
+	background: #e51b1b;
+}
+
+.btn_sel:hover {
+	background: #c71a1a;
+}
+
+.btn_fun {
+	width: 135px;
+}
