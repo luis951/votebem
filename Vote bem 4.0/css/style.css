@@ -1,0 +1,297 @@
+
+/* Classes Classes Classes Classes Classes */
+
+html, body {
+	height: 100%;
+	background: #b0b0b0;
+}
+
+.btn_custom {
+	background: linear-gradient(#fdd908,#f6a30a);
+	color: #00953c;
+	width: 90px;
+	height: 35px;
+	float: right;
+	position: relative;
+	margin: -40px 80px 0 0;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	border: 1px solid #00953c;
+	border-radius: 3px;
+	padding: 6.5px 0 0 7px;
+}
+
+.btn_custom:hover {
+	background: #fdd908;
+	color: #00953c;
+	text-decoration: none;
+}
+
+.btn_custom:focus {
+	background: #fdd908;
+	color: #00953c;
+}
+
+.tela {
+	background: url(../img/lcd.png) no-repeat;
+	width: 360px;	
+	height: 310px;
+	border-radius: 5px;
+	margin: 70px 0 0 20px;
+}
+
+.text_space {
+	width: 360px;
+	height: 280px;
+}
+
+.logo_votobem {
+	padding: 8px 85px 0 85px;
+}
+
+.escolhas {
+	background: linear-gradient(30deg,#808080,#adadad);
+	width: 320px;
+	height: 310px;
+	border-radius: 5px;
+	margin: 70px 0 0 15px;
+}
+
+.btn_escolhas {
+	color: #fff;
+	background: #696868;
+	width: 250px;
+	border: 1px solid #595656;
+	margin: 15px 35px 0 35px;
+	text-transform: uppercase;
+}
+
+.btn_escolhas:hover {
+	color: #fff;
+	background: #595656;
+	outline: 0;
+}
+
+.btn_escolhas:focus {
+	color: #fff;
+	background: linear-gradient(#4d4949,#595656);
+	outline: 0;
+}
+
+.btn_confirmar {
+	width: 110px;
+	background: #309a41;
+	color: #000;
+	margin: 25px 35px 0 0;
+	border-bottom: 3px solid #21652c;
+	border-right: 3px solid #21652c;
+	float: right;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.btn_confirmar:hover {
+	color: #000;
+	background: #2a7f38;
+}
+
+.btn_confirmar:active {
+	color: #000;
+	background: #2a7f38;
+	border: none;
+	border-top: 3px solid #21652c;
+	border-left: 3px solid #21652c;
+	outline: 0;
+}
+
+.btn_confirmar:focus {
+	outline: 0;
+	color: #000;
+}
+
+.btn_voltar {
+	width: 90px;
+	background: #e83a1c;
+	color: #000;
+	border-bottom: 3px solid #af250d;
+	border-right: 3px solid #af250d;
+	margin: 25px 50px 0 0;
+	float: right;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.btn_voltar:hover {
+	color: #000;
+	background: #bf360c;
+}
+
+.btn_voltar:active {
+	color: #000;
+	background: #bf360c;
+	border: none;
+	border-top: 3px solid #af250d;
+	border-left: 3px solid #af250d;
+	outline: 0;
+}
+
+.btn_voltar:focus {
+	color: #000;
+	outline: 0;
+}
+
+.modal_grafico {
+	width: 900px;
+	height: 550px;
+	background: url(../img/grafico.png),
+				#000;
+	margin-left: -150px;
+}
+
+.btn_grafico {
+	width: 120px;
+	border-radius: 100px;
+	border: 2px solid #000;
+	background: transparent;
+	color: #000;
+	margin: 70px 0 0 10px;
+	text-decoration: none;
+}
+
+.btn_grafico:hover {
+	color: #000;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.btn_grafico:visited {
+	color: #000;
+}
+
+.video {
+	padding: 5px;
+}
+
+.tit_result {
+	color: #000;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px 0 0 0;
+}
+
+.area_texto {
+	width: 280px;
+	height: 130px;
+	margin: 0 0 0 20px;
+	overflow: auto;
+}
+
+.text_result {
+	color: #000;
+	text-align: justify;
+	padding: 0 15px;
+}
+
+.retornar {
+	width: 200px;
+	height: 90px;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.btn_final {
+	width: 260px;
+	height: 35px;
+	margin: 0 0 5px 0;
+	border-radius: 5px;
+}
+
+.compartilhar {
+	width: 260px;
+	height: 50px;
+	margin: -5px 0 0 30px;
+}
+
+.btn_ref {
+	background: url(../img/tt.png);
+	border: none;
+	border-radius: 100px;
+	width: 37px;
+	height: 35px;
+	color: #fff;
+	float: right;
+	margin: 7px 10px 0 0;
+}
+
+.btn_ref:focus {
+	outline: 0;
+}
+
+.btn_ref2 {
+	background: url(../img/fb.png);
+	width: 37px;
+	height: 35px;
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	float: right;
+	margin: 7px 0 0 0;
+
+}
+.btn_ref2:focus {
+	outline: 0;
+}
+
+.logo_fim {
+	margin: -45px 0 0 30px
+}
+
+.cole {
+	float: left;
+}
+
+/* TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA */
+
+#urna h4 {
+	color: #000;
+	text-align: center;
+	padding: 120px 60px 0 60px;
+}
+
+#urna p {
+	color: #000;
+	float: right;
+	margin: 3px 10px 0 0;
+}
+
+a:visited {
+	color: #000;
+}
+
+.btn_margin {
+	margin: 120px 0 0 10px;
+}
+
+.btn_margin1 {
+	margin: 150px 0 0 10px;
+}
+
+.btn_margin2 {
+	margin: 40px 0 0 10px;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.btn_sel {
+	background: #e51b1b;
+}
+
+.btn_sel:hover {
+	background: #c71a1a;
+}
+
+.btn_fun {
+	width: 135px;
+}
