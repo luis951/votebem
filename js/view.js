@@ -7,16 +7,16 @@ function mostrarPerguntaVal(){ //função que mostra na tela uma pergunta do eix
 }
 
 function resultadoFinal(){ //função mostra na tela o gráfico
+    $('#'+obj.resultados[resultadoIndex].titulo).addClass('btn_sel');
 	$('#linkResultado').trigger('click');
-    document.getElementById(obj.resultados[resultadoIndex].titulo).className = "btn btn_grafico btn_sel";
 }
 
 function numeroPergunta(param){ //função mostra na tela a pergunta em curso
+    if(param==true) totalPergunta++;
+    else if(param==false) totalPergunta--;
 	var num = totalPergunta.toString();
 	num += "/10";
     document.getElementById("totalPerguntas").innerHTML = num;
-	if(param==true) totalPergunta++;
-	else if(param==false) totalPergunta--;
 }
 
 function setarModal(index){ //função esconde a opção de compartilhar em resultados que não são o do usuário

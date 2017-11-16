@@ -19,7 +19,7 @@ var obj = JSON.parse(text);
 			y = 0;
 			vetorHistoricoX = [0];
 			vetorHistoricoY = [0];
-			totalPergunta = 1;
+			totalPergunta = 0;
 			while(vetorEconomicas.length<5){
 				var random = Math.ceil(Math.random()*obj.perguntas.perguntasEco.length-1);
 				if(vetorEconomicas.indexOf(random) > -1) continue;
@@ -99,8 +99,8 @@ var obj = JSON.parse(text);
     						vetorHistoricoX.splice(vetorHistoricoX.length-1,1);
     						x = vetorHistoricoX[vetorHistoricoX.length-1];
     					}
-    					numeroPergunta(false); //função decrementa o número da pergunta através do parametro false
-    				} 
+                        if (totalPergunta>1) numeroPergunta(false); //função decrementa o número da pergunta através do parametro false
+    				}
 	   			});
 			});
 
@@ -157,7 +157,11 @@ var obj = JSON.parse(text);
 			resultadoFinal(); //ao final é chamada a função que mostra os resultados na tela
 		}
 
-		$("#refazer").click(function(){ //função reinicializa o quiz e reseta as variáveis
-			$('#linkInicio').trigger('click');
-			inicializarQuiz();
-		});
+		$(function(){
+			$("#refazer").click(function(){ //função reinicializa o quiz e reseta as variáveis
+				console.log("refazer");
+				$('#linkInicio').trigger('click');
+                $('#'+obj.resultados[resultadoIndex].titulo).removeClass('btn_sel');
+				inicializarQuiz();
+			});
+        });
