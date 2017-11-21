@@ -117,10 +117,24 @@
 						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Neoconservadorismo" onclick="setarModal(1)">NeoCon</a></li>
 						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Capitalismo libertário" onclick="setarModal(2)">Capitalismo Lib.</a></li>
 						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarcocapitalismo" onclick="setarModal(3)">Anarco Cap.</a></li>
-						 		</ul>
+								</ul>
 						 	</div> <!-- Fim cole -->
 
 					 	</div> <!-- Fim modal_grafico -->
+
+					 	<div class="info_graf">
+					 		<span class="info_marg style_info">Pró-estado</span>
+					 		<span class="info_marg1 style_info">Pró-mercado</span>
+					 		<span class="info_marg2 style_info">Pró-costumes</span>
+					 		<span class="info_marg3 style_info">Pró-modernidade</span>
+					 		<a href="index.html">
+					 			<button type="button" class="btn_ref_graf" data-toggle="tooltip" data-placement="top" title="Refazer"><span class="glyphicon glyphicon-repeat"></span></button>
+					 		</a>
+					 		<a href="">
+					 			<button type="button" class="btn_vol_graf" data-toggle="tooltip" data-placement="top" title="Fechar gráfico" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+					 		</a>
+					 	</div>
+
 					</div> <!-- Fim modal-content -->
 				</div> <!-- Fim modal-dialog -->
 			</div> <!-- Fim grafico -->
@@ -143,23 +157,22 @@
 
 						<section class="retornar">
 
+							<a data-toggle="modal" data-target="#grafico" id="linkResultado"><button type="button" class="btn_final btn_escolhas">Confira outros resultados</button></a>
 							<button type="button" class="btn_final btn_escolhas" id="refazer">Refazer</button>
 							<a href="#inicio" id="linkInicio" data-toggle="tab"></a>
-
-							<a data-toggle="modal" data-target="#grafico" id="linkResultado"><button type="button" class="btn_final btn_escolhas">Gráfico</button></a>
 						</section> <!-- Fim retornar -->
 
 						<div class="compartilhar" id="compartilharDiv">
 							<div class="fb-share-button" data-href="file:///D:/Vote%20bem%202.0/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
 										
 								<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
-									<button type="button" class="btn_ref2"></button>
+									<button type="button" class="btn_ref2" data-toggle="tooltip" data-placement="top" title="Compartilhar no facebook"></button>
 								</a>
 							</div>
 
 							<div>
 								<a href="https://twitter.com/intent/tweet?button_hashtag=Votebem">
-									<button type="button" class="btn_ref ult"></button>
+									<button type="button" class="btn_ref ult" data-toggle="tooltip" data-placement="top" title="Compartilhar no twitter"></button>
 								</a>
 							</div>
 
