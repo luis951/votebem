@@ -3,7 +3,7 @@
 
 html, body {
 	height: 100%;
-	background: #FFF;
+	background-color: #FFF;
 }
 
 .btn_custom {
@@ -69,13 +69,13 @@ html, body {
 .btn_escolhas:hover {
 	color: #fff;
 	background: #595656;
-	outline: 0;
+	outline: 0 !important;
 }
 
 .btn_escolhas:focus {
 	color: #fff;
-	background: linear-gradient(#4d4949,#595656);
-	outline: 0;
+	background: linear-gradient(#1e1a1a, #373434);
+	outline: 0 !important;
 }
 
 .btn_confirmar {
@@ -101,11 +101,12 @@ html, body {
 	border: none;
 	border-top: 3px solid #21652c;
 	border-left: 3px solid #21652c;
-	outline: 0;
+	outline: 0 !important;
+
 }
 
 .btn_confirmar:focus {
-	outline: 0;
+	outline: 0 !important;
 	color: #000;
 }
 
@@ -132,12 +133,12 @@ html, body {
 	border: none;
 	border-top: 3px solid #af250d;
 	border-left: 3px solid #af250d;
-	outline: 0;
+	outline: 0 !important;
 }
 
 .btn_voltar:focus {
 	color: #000;
-	outline: 0;
+	outline: 0 !important;
 }
 
 .modal_grafico {
@@ -152,7 +153,7 @@ html, body {
 	width: 120px;
 	border-radius: 100px;
 	border: 2px solid #000;
-	background: rgba(220,220,220,0.6);
+	background: transparent;
 	color: #000;
 	margin: 70px 0 0 10px;
 	text-decoration: none;
@@ -250,63 +251,6 @@ html, body {
 	float: left;
 }
 
-.info_graf {
-	width: 980px;
-	height: 40px;
-	background: transparent;
-	margin: -295px 0 0 -250px;
-}
-
-.info_marg {
-	position: absolute;
-	top: 260px;
-	left: -255px;
-}
-
-.info_marg1 {
-	position: absolute;
-	top: 250px;
-	left: 760px;
-}
-
-.info_marg2 {
-	position: absolute;
-	top: -30px;
-	left: 240px;
-}
-
-.info_marg3 {
-	position: absolute;
-	top: 555px;
-	left: 225px;
-}
-
-.btn_ref_graf {
-	background: transparent;
-	font-size: 30px;
-	color: #309a41;
-	border: none;
-	float: right;
-	margin: 70px 0 0 0;
-}
-
-.btn_ref_graf:focus {
-	outline: 0;
-}
-
-.btn_vol_graf {
-	background: transparent;
-	font-size: 30px;
-	color: #ff0000;
-	border: none;
-	float: right;
-	margin: 70px 10px 0 0;
-}
-
-.btn_vol_graf:focus {
-	outline: 0;
-}
-
 /* TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA */
 
 #urna h4 {
@@ -325,11 +269,6 @@ a:visited {
 	color: #000;
 }
 
-.style_info {
-	color: #000;
-	font-size: 20px;
-}
-
 .btn_margin {
 	margin: 120px 0 0 10px;
 }
@@ -339,7 +278,15 @@ a:visited {
 }
 
 .btn_margin2 {
-	margin: 40px 0 0 10px;
+	margin: 42px 0 0 10px;
+}
+
+.btn_sl{
+	margin: 120px 0 0 10px;
+}
+
+.btn_s{
+	margin: 120px 0 0 10px;
 }
 
 ul {
@@ -347,10 +294,7 @@ ul {
 }
 
 .btn_sel {
-	background: #ec0606;
-	animation-name: animacao_btn;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
+	background: #e51b1b;
 }
 
 .btn_sel:hover {
@@ -359,16 +303,4 @@ ul {
 
 .btn_fun {
 	width: 135px;
-}
-
-/* ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES */
-
-@keyframes animacao_btn {
-
-	from {background: radial-gradient(#c40f0f,#ff0000);}
-	to {background: radial-gradient(#ff0000,#c40f0f);}
-
-	
-
-
 }

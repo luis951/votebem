@@ -8,9 +8,7 @@ function mostrarPerguntaVal(){ //função que mostra na tela uma pergunta do eix
 
 function resultadoFinal(){ //função mostra na tela o gráfico
     $('#'+obj.resultados[resultadoIndex].titulo).addClass('btn_sel');
-    document.getElementById(obj.resultados[resultadoIndex].titulo).innerHTML = "Você está aqui";
-    $('#'+obj.resultados[resultadoIndex].titulo).trigger('click');
-    $('#linkResultado').trigger('click');
+	$('#linkResultado').trigger('click');
 }
 
 function numeroPergunta(param){ //função mostra na tela a pergunta em curso
@@ -27,6 +25,6 @@ function setarModal(index){ //função esconde a opção de compartilhar em resu
 	} else {
 		$('#compartilharDiv').css('visibility', 'visible');
 	} //abaixo é chamado o titulo e os textos do json
-	document.getElementById("tituloResultado").innerHTML = obj.resultados[index].titulo; //o parametro index é enviado
+	document.getElementById("tituloResultado").innerHTML = obj.resultados[index].titulo; //o parametro index é enviado 
 	document.getElementById("textoResultado").innerHTML = obj.resultados[index].texto;   //através do onClick no html
 }

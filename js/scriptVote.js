@@ -43,10 +43,6 @@ var obj = JSON.parse(text);
     			mostrarPerguntaEco();
 			   	numeroPergunta(true);
 			});
-
-            $("html").click(function(){
-                $('.btn_escolhas').removeClass('active');
-            });
     	});
 
 		$(document).on('click', '.btn_escolhas', function() { //função usada para captar a resposta dada pelo usuário
@@ -163,6 +159,7 @@ var obj = JSON.parse(text);
 
 		$(function(){
 			$("#refazer").click(function(){ //função reinicializa o quiz e reseta as variáveis
+				console.log("refazer");
 				$('#linkInicio').trigger('click');
                 $('#'+obj.resultados[resultadoIndex].titulo).removeClass('btn_sel');
 				inicializarQuiz();
