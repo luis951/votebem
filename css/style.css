@@ -3,7 +3,7 @@
 
 html, body {
 	height: 100%;
-	background-color: #FFF;
+	background: #FFF;
 }
 
 .btn_custom {
@@ -30,6 +30,14 @@ html, body {
 .btn_custom:focus {
 	background: #fdd908;
 	color: #00953c;
+}
+
+.mogi {
+	position: absolute;
+    height: 50px;
+    width: auto;
+	top: 355px;
+	left: 120px;
 }
 
 .tela {
@@ -74,7 +82,7 @@ html, body {
 
 .btn_escolhas:focus {
 	color: #fff;
-	background: linear-gradient(#1e1a1a, #373434);
+	background: linear-gradient(#4d4949,#595656);
 	outline: 0 !important;
 }
 
@@ -102,11 +110,10 @@ html, body {
 	border-top: 3px solid #21652c;
 	border-left: 3px solid #21652c;
 	outline: 0 !important;
-
 }
 
 .btn_confirmar:focus {
-	outline: 0 !important;
+	outline: 0;
 	color: #000;
 }
 
@@ -142,9 +149,9 @@ html, body {
 }
 
 .modal_grafico {
-	width: 900px;
-	height: 550px;
-	background: url(../img/grafico.png),
+	width: 903px;
+	height: 553px;
+	background: url(../img/teste.png),
 				#000;
 	margin-left: -150px;
 }
@@ -153,7 +160,7 @@ html, body {
 	width: 120px;
 	border-radius: 100px;
 	border: 2px solid #000;
-	background: transparent;
+	background: rgba(220,220,220,0.6);
 	color: #000;
 	margin: 70px 0 0 10px;
 	text-decoration: none;
@@ -170,7 +177,7 @@ html, body {
 }
 
 .video {
-	padding: 5px;
+	border-radius: 5px;
 }
 
 .tit_result {
@@ -251,6 +258,37 @@ html, body {
 	float: left;
 }
 
+.info_graf {
+	width: 980px;
+	height: 40px;
+	background: transparent;
+	margin: -295px 0 0 -250px;
+}
+
+.info_marg {
+	position: absolute;
+	top: 260px;
+	left: -220px;
+}
+
+.info_marg1 {
+	position: absolute;
+	top: 250px;
+	left: 760px;
+}
+
+.info_marg2 {
+	position: absolute;
+	top: -30px;
+	left: 240px;
+}
+
+.info_marg3 {
+	position: absolute;
+	top: 555px;
+	left: 225px;
+}
+
 /* TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA TIPROGRAFIA */
 
 #urna h4 {
@@ -269,8 +307,13 @@ a:visited {
 	color: #000;
 }
 
+.style_info {
+	color: #fff;
+	font-size: 20px;
+}
+
 .btn_margin {
-	margin: 120px 0 0 10px;
+	margin: 120px 0 15px 10px;
 }
 
 .btn_margin1 {
@@ -278,15 +321,11 @@ a:visited {
 }
 
 .btn_margin2 {
-	margin: 42px 0 0 10px;
+	margin: 40px 0 15px 10px;
 }
 
-.btn_sl{
-	margin: 120px 0 0 10px;
-}
-
-.btn_s{
-	margin: 120px 0 0 10px;
+.btn_br{
+	margin: 120px 0 -5px 10px;
 }
 
 ul {
@@ -294,7 +333,10 @@ ul {
 }
 
 .btn_sel {
-	background: #e51b1b;
+	background: #ec0606;
+	animation-name: animacao_btn;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
 }
 
 .btn_sel:hover {
@@ -303,4 +345,11 @@ ul {
 
 .btn_fun {
 	width: 135px;
+}
+
+/* ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES ANIMAÇÕES */
+
+@keyframes animacao_btn {
+	from {background: radial-gradient(#c40f0f,#ff0000);}
+	to {background: radial-gradient(#ff0000,#c40f0f);}
 }

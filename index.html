@@ -40,6 +40,7 @@
 						<a href="#urna" id="iniciar" data-toggle="tab" class="btn_custom">Começar&nbsp;<span class="glyphicon glyphicon-share-alt"></span></a>
 					</div> <!-- col-md-7 -->
 
+					<img src="img/logo%20mogi.png" class="mogi"/>
 				</div> <!-- Fim row -->
 			</div> <!-- Fim container -->
 
@@ -58,12 +59,12 @@
 					<div class="escolhas">
 						<ul class="nav">
 							<img src="img/logo.svg" class="logo_votobem">
-							<li><button type="button" name="opcao" class="btn btn_escolhas target" id="concordo_m">concordo muito</button></li>
-							<li><button type="button" name="opcao" class="btn btn_escolhas target" id="concordo">concordo</button></li>
-							<li><button type="button" name="opcao" class="btn btn_escolhas target" id="discordo">discordo</button></li>
-							<li><button type="button" name="opcao" class="btn btn_escolhas target" id="discordo_m">discordo muito</button></li>
-							<li><button type="submit" class="btn btn_confirmar target" id="avancar">confirmar</button></li>
-							<li><button class="btn btn_voltar target" id="voltar">voltar</button></li>
+							<li><button type="button" name="opcao" class="btn btn_escolhas" id="concordo_m">concordo muito</button></li>
+							<li><button type="button" name="opcao" class="btn btn_escolhas" id="concordo">concordo</button></li>
+							<li><button type="button" name="opcao" class="btn btn_escolhas" id="discordo">discordo</button></li>
+							<li><button type="button" name="opcao" class="btn btn_escolhas" id="discordo_m">discordo muito</button></li>
+							<li><button type="submit" class="btn btn_confirmar" id="avancar">confirmar</button></li>
+							<li><button class="btn btn_voltar" id="voltar">voltar</button></li>
 						</ul>
 					</div> <!-- Fim escolhas -->
 				</div> <!-- Fim urna_left -->
@@ -71,58 +72,61 @@
 			</div> <!-- Fim urna -->
 
 			<div class="modal fade" id="grafico">
-				<div class="modal-dialog display over">
-					<!--style="overflow: scroll; max-height: 430px; max-width: 767px; margin-top: -20;margin-left: -30;"-->
-					<div class="modal-content">
-
+				<div class="modal-dialog ">
+					<div class="modal-content ">
 					 	<div class=" modal_grafico">
 
 						 	<div class="cole">
 						 		<ul>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Comunismo" onclick="setarModal(16)">Comunismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Socialismo" onclick="setarModal(17)">Socialismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_sl" id="Socialismo libertário" onclick="setarModal(18)">Socialismo Lib.</a></li>
-									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarcocoletivismo" onclick="setarModal(19)">Coletivismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Comunismo" onclick="setarModal(16)">Comunismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Socialismo" onclick="setarModal(17)">Socialismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_lib  " id="Socialismo libertário" onclick="setarModal(18)">Socialismo<br>Liberalismo</a></li>
+									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Anarcocoletivismo " onclick="setarModal(19)">Coletivismo</a></li>
 					 			</ul>
 					 		</div> <!-- Fim cole -->
 
 						 	<div class="cole">
 						 		<ul>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_two" id="Nacionalismo" onclick="setarModal(12)">Nacionalismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_two" id="Trabalhismo" onclick="setarModal(13)">Trabalhismo</a></li>
-									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_s" id="Sindicalismo" onclick="setarModal(14)">Sindicalismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_sd" id="Social democracia" onclick="setarModal(15)">Social Dem.</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Nacionalismo" onclick="setarModal(12)">Nacionalismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Trabalhismo" onclick="setarModal(13)">Trabalhismo</a></li>
+									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin  " id="Sindicalismo " onclick="setarModal(14)">Sindicalismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Social democracia" onclick="setarModal(15)">Social Dem.</a></li>
 						 		</ul>
 						 	</div> <!-- Fim cole -->
 
 						 	<div class="cole">
 						 		<ul>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_two" id="Autoritarismo" onclick="setarModal(8)">Autoritarismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin1" id="Centro" onclick="setarModal(9)">Centro</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin2" id="Ativismo" onclick="setarModal(10)">Ativismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_a" id="Anarquismo" onclick="setarModal(11)">Anarquismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_tam  " id="Autoritarismo" onclick="setarModal(8)">Autoritarismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin1  " id="Centro" onclick="setarModal(9)">Centro</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin2  " id="Ativismo" onclick="setarModal(10)">Ativismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_an  " id="Anarquismo" onclick="setarModal(11)">Anarquismo</a></li>
 						 		</ul>
 						 	</div> <!-- Fim col-md-2 -->
 
 						 	<div class="cole">
 						 		<ul>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Paleoconservadorismo" onclick="setarModal(4)">PaleoCon</a></li>
-									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Conservadorismo" onclick="setarModal(5)">Conservador</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Liberalismo" onclick="setarModal(6)">Liberalismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Mutualismo" onclick="setarModal(7)">Mutualismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Paleoconservadorismo" onclick="setarModal(4)">PaleoCon</a></li>
+									<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_tam  " id="Conservadorismo" onclick="setarModal(5)">Conservador</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin  " id="Liberalismo" onclick="setarModal(6)">Liberalismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Mutualismo" onclick="setarModal(7)">Mutualismo</a></li>
 						 		</ul>
 						 	</div> <!-- Fim cole -->
 
 						 	<div class="cole">
 						 		<ul>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_fun " id="Fundamentalismo" onclick="setarModal(0)">Fundamentalismo</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Neoconservadorismo" onclick="setarModal(1)">NeoCon</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_margin" id="Capitalismo libertário" onclick="setarModal(2)">Capitalismo Lib.</a></li>
-						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico" id="Anarcocapitalismo" onclick="setarModal(3)">Anarco Cap.</a></li>
-						 		</ul>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_fun  " id="Fundamentalismo" onclick="setarModal(0)">Fundamentalismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Neoconservadorismo" onclick="setarModal(1)">NeoCon</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico btn_lib  " id="Capitalismo libertário" onclick="setarModal(2)">Capitalismo<br>Liberalismo</a></li>
+						 			<li><a href="#resultado" data-dismiss="modal" data-toggle="tab" class="btn btn_grafico  " id="Anarcocapitalismo" onclick="setarModal(3)">Anarco Cap.</a></li>
+								</ul>
 						 	</div> <!-- Fim cole -->
 
 					 	</div> <!-- Fim modal_grafico -->
+
+					 	<div class="info_graf">
+
+					 	</div>
+
 					</div> <!-- Fim modal-content -->
 				</div> <!-- Fim modal-dialog -->
 			</div> <!-- Fim grafico -->
@@ -131,7 +135,7 @@
 
 				<div class="urna_right">
 					<div class="tela">
-						<iframe name="video" width="358" height="308" src="https://www.youtube.com/embed/epQEUGlbUnM" frameborder="0" allowfullscreen class="video"></iframe>
+						<iframe name="video" width="365" height="309" src="https://www.youtube.com/embed/epQEUGlbUnM" frameborder="0" allowfullscreen class="video"></iframe>
 					</div>
 				</div> <!-- Fim urna_right -->
 
@@ -145,23 +149,22 @@
 
 						<section class="retornar">
 
+							<a data-toggle="modal" data-target="#grafico" id="linkResultado"><button type="button" class="btn_final btn_escolhas">Confira outras ideologias</button></a>
 							<button type="button" class="btn_final btn_escolhas" id="refazer">Refazer</button>
 							<a href="#inicio" id="linkInicio" data-toggle="tab"></a>
-
-							<a data-toggle="modal" data-target="#grafico" id="linkResultado"><button type="button" class="btn_final btn_escolhas">Gráfico</button></a>
 						</section> <!-- Fim retornar -->
 
 						<div class="compartilhar" id="compartilharDiv">
 							<div class="fb-share-button" data-href="file:///D:/Vote%20bem%202.0/index.html" data-layout="button" data-size="small" data-mobile-iframe="true">
 										
 								<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">
-									<button type="button" class="btn_ref2"></button>
+									<button type="button" class="btn_ref2" data-toggle="tooltip" data-placement="top" title="Compartilhar no facebook"></button>
 								</a>
 							</div>
 
 							<div>
 								<a href="https://twitter.com/intent/tweet?button_hashtag=Votebem">
-									<button type="button" class="btn_ref ult"></button>
+									<button type="button" class="btn_ref ult" data-toggle="tooltip" data-placement="top" title="Compartilhar no twitter"></button>
 								</a>
 							</div>
 
