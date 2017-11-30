@@ -32,14 +32,6 @@ html, body {
 	color: #00953c;
 }
 
-.mogi {
-	position: absolute;
-    height: 50px;
-    width: auto;
-	top: 355px;
-	left: 120px;
-}
-
 .tela {
 	background: url(../img/lcd.png) no-repeat;
 	width: 360px;	

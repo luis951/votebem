@@ -14,12 +14,6 @@
 		float: left;
 		margin: -13px 0 0 10px;
 	}
-
-	.mogi {
-	position: absolute;
-	top: 200px;
-	left: 20px;
-}
 	.urna_left {
 		background: url(../img/urna_mobile2.png) no-repeat;
 		width: 400px;
@@ -162,11 +156,6 @@
 		margin: -40px 140px 0 0;
 	}
 
-	.mogi {
-		position: absolute;
-		top: 320px;
-		left: 30px;
-	}
 	.urna_right {
 		background: url(../img/urna_mobile.png) no-repeat;
 		width: 400px;
@@ -315,11 +304,7 @@
 	.fundo{
 		background-color: #fff;
 	}
-	.mogi {
-		position: absolute;
-		top: 355px;
-		left: 30px;
-	}
+
 	.urna_right {
 		background: url(../img/urna_mobile.png) no-repeat;
 		width: 400px;
@@ -464,11 +449,6 @@
 		background-color: #fff;
 	}
 
-	.mogi {
-	position: absolute;
-	top: 355px;
-	left: 30px;
-}
 	.urna_right {
 		background: url(../img/urna_mobile.png) no-repeat;
 		width: 400px;
@@ -877,11 +857,7 @@
 	.btn_custom {
 		margin: -40px 140px 0 0;
 	}
-	.mogi {
-		position: absolute;
-		top: 350px;
-		left: 120px;
-	}
+
 	.urna_right {
 		background: url(../img/urna1.png) no-repeat;
 		width: 400px;
@@ -1074,12 +1050,6 @@
 		margin: 60px 0 0 0;
 	}
 
-	.mogi {
-		position: absolute;
-		top: 315px;
-		left: 120px;
-	}
-
 	.btn_vol_graf:focus {
 		outline: 0;
 	}
@@ -1113,11 +1083,7 @@
 	.btn_custom {
 		margin: -40px 80px 0 0; 
 	}
-	.mogi {
-		position: absolute;
-		top: 355px;
-		left: 120px;
-	}
+
 	.urna_right {
 		background: url(../img/urna1.png) no-repeat;
 		width: 400px;
